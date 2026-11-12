@@ -25,7 +25,7 @@ int main() {
 
     // Multiplication module
     case 3: {
-        // MULTIPLICATION
+        result = a * b;
         break;
     }
 
