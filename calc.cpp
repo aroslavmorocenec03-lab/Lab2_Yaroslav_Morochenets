@@ -19,7 +19,7 @@ int main() {
 
     // Subtraction module
     case 2: {
-        // SUBTRACTION
+        result = a - b;
         break;
     }
 
