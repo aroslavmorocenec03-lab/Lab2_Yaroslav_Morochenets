@@ -13,7 +13,7 @@ int main() {
 
     switch (op) {
     case 1: {
-        // ADDITION
+        result = a + b;
         break;
     }
 
@@ -44,3 +44,4 @@ int main() {
     std::cout << "Result = " << result << '\n';
     return 0;
 }
+
