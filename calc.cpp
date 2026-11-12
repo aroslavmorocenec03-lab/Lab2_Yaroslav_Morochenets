@@ -25,7 +25,7 @@ int main() {
 
     // Multiplication module
     case 3: {
-        // MULTIPLICATION
+        result = a * b;
         break;
     }
 
@@ -44,3 +44,4 @@ int main() {
     std::cout << "Result = " << result << '\n';
     return 0;
 }
+
