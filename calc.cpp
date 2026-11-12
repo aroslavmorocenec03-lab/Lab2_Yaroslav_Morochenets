@@ -31,7 +31,7 @@ int main() {
 
     // Division module
     case 4: {
-        // DIVISION
+        if (b == 0) { std::cerr << "Division by zero\n"; return 2; } result = a / b;
         break;
     }
 
