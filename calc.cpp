@@ -19,7 +19,7 @@ int main() {
 
     // Subtraction module
     case 2: {
-        // SUBTRACTION
+        result = a - b;
         break;
     }
 
@@ -44,3 +44,4 @@ int main() {
     std::cout << "Result = " << result << '\n';
     return 0;
 }
+
