@@ -6,7 +6,7 @@ int main() {
     int op = 0;
     std::cout << "First number: ";
     if (!(std::cin >> a)) { std::cerr << "Invalid input\n"; return 2; }
-    std::cout << "Operation (1:+ 2:- 3:* 4:/): ";
+    std::cout << "Operation (1:+ 2:- 3:* 4:/ 5:pow): ";
     if (!(std::cin >> op)) { std::cerr << "Invalid input\n"; return 2; }
     std::cout << "Second number: ";
     if (!(std::cin >> b)) { std::cerr << "Invalid input\n"; return 2; }
@@ -35,7 +35,7 @@ int main() {
         break;
     }
 
-    // POWER_CASE
+    case 5: { result = std::pow(a, b); break; }
     default:
         std::cerr << "Unknown operation\n";
         return 2;
@@ -44,4 +44,5 @@ int main() {
     std::cout << "Result = " << result << '\n';
     return 0;
 }
+
 
