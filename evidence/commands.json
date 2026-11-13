@@ -1,0 +1,1271 @@
+[
+  {
+    "id": 1,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git --version",
+    "output": "git version 2.56.0.windows.4",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:06"
+  },
+  {
+    "id": 2,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global user.name \"Ярослав Мороченець\"",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:07"
+  },
+  {
+    "id": 3,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global user.email \"346407698+aroslavmorocenec03-lab@users.noreply.github.com\"",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:07"
+  },
+  {
+    "id": 4,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global init.defaultBranch master",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:08"
+  },
+  {
+    "id": 5,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global core.autocrlf false",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:09"
+  },
+  {
+    "id": 6,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global core.quotePath false",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:09"
+  },
+  {
+    "id": 7,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "git config --global --get user.name",
+    "output": "Ярослав Мороченець",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:10"
+  },
+  {
+    "id": 8,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution",
+    "command": "New-Item -ItemType Directory FCIT | Select-Object Name",
+    "output": "Name\n----\nFCIT",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:10"
+  },
+  {
+    "id": 9,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "New-Item -ItemType File student.html | Select-Object Name",
+    "output": "Name\n----\nstudent.html",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:11"
+  },
+  {
+    "id": 10,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "Set-Content -Encoding utf8NoBOM student.html '<!doctype html><html lang=\"uk\"><meta charset=\"utf-8\"><title>Студент</title><p>Ярослав Мороченець</p></html>'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:12"
+  },
+  {
+    "id": 11,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git init",
+    "output": "Initialized empty Git repository in C:/Users/ksvit/Documents/Codex/2026-11-12/d-x20/work/Git-Labs/execution/FCIT/.git/",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:12"
+  },
+  {
+    "id": 12,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git add student.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:13"
+  },
+  {
+    "id": 13,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"First Commit\"",
+    "output": "[master (root-commit) ad25a89] First Commit\n 1 file changed, 1 insertion(+)\n create mode 100644 student.html",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:13"
+  },
+  {
+    "id": 14,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git status",
+    "output": "On branch master\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:14"
+  },
+  {
+    "id": 15,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw student.html).Replace('Ярослав Мороченець','Ярослав <b>Мороченець</b>') | Set-Content -Encoding utf8NoBOM student.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:15"
+  },
+  {
+    "id": 16,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git status",
+    "output": "On branch master\nChanges not staged for commit:\n  (use \"git add <file>...\" to update what will be committed)\n  (use \"git restore <file>...\" to discard changes in working directory)\n\tmodified:   student.html\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:16"
+  },
+  {
+    "id": 17,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git diff -- student.html",
+    "output": "diff --git a/student.html b/student.html\nindex 7b66270..6c62b5d 100644\n--- a/student.html\n+++ b/student.html\n@@ -1 +1,2 @@\n-<!doctype html><html lang=\"uk\"><meta charset=\"utf-8\"><title>Студент</title><p>Ярослав Мороченець</p></html>\n+<!doctype html><html lang=\"uk\"><meta charset=\"utf-8\"><title>Студент</title><p>Ярослав <b>Мороченець</b></p></html>\n+",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:16"
+  },
+  {
+    "id": 18,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "Set-Content -Encoding utf8NoBOM junior.html '<!doctype html><html><meta charset=\"utf-8\"><title>Junior</title><p>Junior developer</p></html>'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:17"
+  },
+  {
+    "id": 19,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "Set-Content -Encoding utf8NoBOM senior.html '<!doctype html><html><meta charset=\"utf-8\"><title>Senior</title><p>Senior developer</p></html>'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:18"
+  },
+  {
+    "id": 20,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git add junior.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:19"
+  },
+  {
+    "id": 21,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git add senior.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:20"
+  },
+  {
+    "id": 22,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"People who work\"",
+    "output": "[master 8435ba8] People who work\n 2 files changed, 2 insertions(+)\n create mode 100644 junior.html\n create mode 100644 senior.html",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:20"
+  },
+  {
+    "id": 23,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git add student.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:21"
+  },
+  {
+    "id": 24,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"People who study\"",
+    "output": "[master 72e9ca6] People who study\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:22"
+  },
+  {
+    "id": 25,
+    "section": "ЛР1. Налаштування та перші коміти",
+    "cwd": "execution/FCIT",
+    "command": "git add .",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:23"
+  },
+  {
+    "id": 26,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "Copy-Item ../../assets/calc-base.cpp calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:24"
+  },
+  {
+    "id": 27,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "Set-Content -Encoding utf8NoBOM .gitignore @('*.exe','*.obj','*.pdb','.zig-cache/','zig-out/')",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:25"
+  },
+  {
+    "id": 28,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp .gitignore",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:25"
+  },
+  {
+    "id": 29,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"Add calculator skeleton\"",
+    "output": "[master 2727c46] Add calculator skeleton\n 2 files changed, 51 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 calc.cpp",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:26"
+  },
+  {
+    "id": 30,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout -b addition",
+    "output": "Switched to a new branch 'addition'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:27"
+  },
+  {
+    "id": 31,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git status --short --branch",
+    "output": "## addition",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:28"
+  },
+  {
+    "id": 32,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw calc.cpp).Replace('// ADDITION','result = a + b;') | Set-Content -Encoding utf8NoBOM calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:29"
+  },
+  {
+    "id": 33,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:29"
+  },
+  {
+    "id": 34,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"addition\"",
+    "output": "[addition a58e067] addition\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:30"
+  },
+  {
+    "id": 35,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout master",
+    "output": "Switched to branch 'master'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:30"
+  },
+  {
+    "id": 36,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout -b subtraction",
+    "output": "Switched to a new branch 'subtraction'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:31"
+  },
+  {
+    "id": 37,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git status --short --branch",
+    "output": "## subtraction",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:31"
+  },
+  {
+    "id": 38,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw calc.cpp).Replace('// SUBTRACTION','result = a - b;') | Set-Content -Encoding utf8NoBOM calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:32"
+  },
+  {
+    "id": 39,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:33"
+  },
+  {
+    "id": 40,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"subtraction\"",
+    "output": "[subtraction 4ed6433] subtraction\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:34"
+  },
+  {
+    "id": 41,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout master",
+    "output": "Switched to branch 'master'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:34"
+  },
+  {
+    "id": 42,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout -b multiplication",
+    "output": "Switched to a new branch 'multiplication'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:35"
+  },
+  {
+    "id": 43,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git status --short --branch",
+    "output": "## multiplication",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:36"
+  },
+  {
+    "id": 44,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw calc.cpp).Replace('// MULTIPLICATION','result = a * b;') | Set-Content -Encoding utf8NoBOM calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:36"
+  },
+  {
+    "id": 45,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:37"
+  },
+  {
+    "id": 46,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"multiplication\"",
+    "output": "[multiplication 47ddf12] multiplication\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:37"
+  },
+  {
+    "id": 47,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout master",
+    "output": "Switched to branch 'master'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:38"
+  },
+  {
+    "id": 48,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout -b division",
+    "output": "Switched to a new branch 'division'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:39"
+  },
+  {
+    "id": 49,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git status --short --branch",
+    "output": "## division",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:40"
+  },
+  {
+    "id": 50,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw calc.cpp).Replace('// DIVISION','if (b == 0) { std::cerr << \"Division by zero\\n\"; return 2; } result = a / b;') | Set-Content -Encoding utf8NoBOM calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:40"
+  },
+  {
+    "id": 51,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:41"
+  },
+  {
+    "id": 52,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"division\"",
+    "output": "[division e9f633d] division\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:41"
+  },
+  {
+    "id": 53,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git checkout master",
+    "output": "Switched to branch 'master'",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:42"
+  },
+  {
+    "id": 54,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git merge --no-ff addition -m \"Merge addition into master\"",
+    "output": "Merge made by the 'ort' strategy.\n calc.cpp | 3 ++-\n 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:43"
+  },
+  {
+    "id": 55,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git merge --no-ff subtraction -m \"Merge subtraction into master\"",
+    "output": "Auto-merging calc.cpp\nMerge made by the 'ort' strategy.\n calc.cpp | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:43"
+  },
+  {
+    "id": 56,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git merge --no-ff multiplication -m \"Merge multiplication into master\"",
+    "output": "Auto-merging calc.cpp\nMerge made by the 'ort' strategy.\n calc.cpp | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:44"
+  },
+  {
+    "id": 57,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git merge --no-ff division -m \"Merge division into master\"",
+    "output": "Auto-merging calc.cpp\nMerge made by the 'ort' strategy.\n calc.cpp | 2 +-\n 1 file changed, 1 insertion(+), 1 deletion(-)",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:45"
+  },
+  {
+    "id": 58,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git status",
+    "output": "On branch master\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:46"
+  },
+  {
+    "id": 59,
+    "section": "ЛР1. Гілки операцій калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git log --oneline --graph --all --decorate",
+    "output": "*   dbd1a5c (HEAD -> master) Merge division into master\n|\\  \n| * e9f633d (division) division\n* |   9008781 Merge multiplication into master\n|\\ \\  \n| * | 47ddf12 (multiplication) multiplication\n| |/  \n* |   633697d Merge subtraction into master\n|\\ \\  \n| * | 4ed6433 (subtraction) subtraction\n| |/  \n* |   f873a2b Merge addition into master\n|\\ \\  \n| |/  \n|/|   \n| * a58e067 (addition) addition\n|/  \n* 2727c46 Add calculator skeleton\n* 72e9ca6 People who study\n* 8435ba8 People who work\n* ad25a89 First Commit",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:46"
+  },
+  {
+    "id": 60,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "zig version",
+    "output": "0.15.2",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:47"
+  },
+  {
+    "id": 61,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "zig c++ -std=c++17 -Wall -Wextra calc.cpp -o calc.exe",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-12 22:48:48"
+  },
+  {
+    "id": 62,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "@('6','1','4') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 10",
+    "exit_code": 0,
+    "started": "2026-11-12 22:50:38"
+  },
+  {
+    "id": 63,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "@('6','2','4') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 2",
+    "exit_code": 0,
+    "started": "2026-11-12 22:50:40"
+  },
+  {
+    "id": 64,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "@('6','3','4') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 24",
+    "exit_code": 0,
+    "started": "2026-11-12 22:50:40"
+  },
+  {
+    "id": 65,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "@('5','4','2') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 2.5",
+    "exit_code": 0,
+    "started": "2026-11-12 22:50:41"
+  },
+  {
+    "id": 66,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "@('5','4','0') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/): Second number: Division by zero",
+    "exit_code": 1,
+    "started": "2026-11-12 22:50:41"
+  },
+  {
+    "id": 67,
+    "section": "ЛР1. Перевірка калькулятора",
+    "cwd": "execution/FCIT",
+    "command": "git tag lab1-complete",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:18"
+  },
+  {
+    "id": 68,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git init",
+    "output": "Reinitialized existing Git repository in C:/Users/ksvit/Documents/Codex/2026-11-12/d-x20/work/Git-Labs/execution/FCIT/.git/",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:18"
+  },
+  {
+    "id": 69,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git remote add origin https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:19"
+  },
+  {
+    "id": 70,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git remote -v",
+    "output": "origin\thttps://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git (fetch)\norigin\thttps://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git (push)",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:19"
+  },
+  {
+    "id": 71,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git branch new_feature",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:20"
+  },
+  {
+    "id": 72,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git branch",
+    "output": "addition\n  division\n* master\n  multiplication\n  new_feature\n  subtraction",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:20"
+  },
+  {
+    "id": 73,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git checkout new_feature",
+    "output": "Switched to branch 'new_feature'",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:21"
+  },
+  {
+    "id": 74,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "(Get-Content -Raw calc.cpp).Replace('// POWER_CASE','case 5: { result = std::pow(a, b); break; }').Replace('4:/','4:/ 5:pow') | Set-Content -Encoding utf8NoBOM calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:22"
+  },
+  {
+    "id": 75,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git diff --stat",
+    "output": "calc.cpp | 5 +++--\n 1 file changed, 3 insertions(+), 2 deletions(-)",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:22"
+  },
+  {
+    "id": 76,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git add calc.cpp",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:23"
+  },
+  {
+    "id": 77,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"New feature added\"",
+    "output": "[new_feature 0bfbb09] New feature added\n 1 file changed, 3 insertions(+), 2 deletions(-)",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:23"
+  },
+  {
+    "id": 78,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "zig c++ -std=c++17 -Wall -Wextra calc.cpp -o calc.exe",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:24"
+  },
+  {
+    "id": 79,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "@('2','5','3') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/ 5:pow): Second number: Result = 8",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:29"
+  },
+  {
+    "id": 80,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "@('2','5','-2') | ./calc.exe",
+    "output": "First number: Operation (1:+ 2:- 3:* 4:/ 5:pow): Second number: Result = 0.25",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:31"
+  },
+  {
+    "id": 81,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git checkout master",
+    "output": "Switched to branch 'master'",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:31"
+  },
+  {
+    "id": 82,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git merge --no-ff new_feature -m \"Merge exponentiation feature\"",
+    "output": "Merge made by the 'ort' strategy.\n calc.cpp | 5 +++--\n 1 file changed, 3 insertions(+), 2 deletions(-)",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:32"
+  },
+  {
+    "id": 83,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git branch -d new_feature",
+    "output": "Deleted branch new_feature (was 0bfbb09).",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:33"
+  },
+  {
+    "id": 84,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git tag lab2-complete",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:33"
+  },
+  {
+    "id": 85,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git status",
+    "output": "On branch master\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:34"
+  },
+  {
+    "id": 86,
+    "section": "ЛР2. Нова операція у new_feature",
+    "cwd": "execution/FCIT",
+    "command": "git log --oneline --graph --all --decorate -16",
+    "output": "*   de2cf6c (HEAD -> master, tag: lab2-complete) Merge exponentiation feature\n|\\  \n| * 0bfbb09 New feature added\n|/  \n*   dbd1a5c (tag: lab1-complete) Merge division into master\n|\\  \n| * e9f633d (division) division\n* |   9008781 Merge multiplication into master\n|\\ \\  \n| * | 47ddf12 (multiplication) multiplication\n| |/  \n* |   633697d Merge subtraction into master\n|\\ \\  \n| * | 4ed6433 (subtraction) subtraction\n| |/  \n* |   f873a2b Merge addition into master\n|\\ \\  \n| |/  \n|/|   \n| * a58e067 (addition) addition\n|/  \n* 2727c46 Add calculator skeleton\n* 72e9ca6 People who study\n* 8435ba8 People who work\n* ad25a89 First Commit",
+    "exit_code": 0,
+    "started": "2026-11-13 21:55:34"
+  },
+  {
+    "id": 87,
+    "section": "ЛР3. Клонування шаблону",
+    "cwd": "execution",
+    "command": "git clone https://github.com/FCIT-SoftwareEngineeringBasics/Lab3.io original-template",
+    "output": "Cloning into 'original-template'...\nfatal: could not read Username for 'https://github.com': terminal prompts disabled",
+    "exit_code": 1,
+    "started": "2026-11-13 22:00:33"
+  },
+  {
+    "id": 88,
+    "section": "ЛР3. Клонування шаблону",
+    "cwd": "execution",
+    "command": "git clone https://github.com/mdn/beginner-html-site-styled.git Lab3_Yaroslav_Morochenets.io",
+    "output": "Cloning into 'Lab3_Yaroslav_Morochenets.io'...",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:34"
+  },
+  {
+    "id": 89,
+    "section": "ЛР3. Клонування шаблону",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git branch -m master",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:36"
+  },
+  {
+    "id": 90,
+    "section": "ЛР3. Клонування шаблону",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git remote -v",
+    "output": "origin\thttps://github.com/mdn/beginner-html-site-styled.git (fetch)\norigin\thttps://github.com/mdn/beginner-html-site-styled.git (push)",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:37"
+  },
+  {
+    "id": 91,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Copy-Item ../../album_index.html index.html",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:37"
+  },
+  {
+    "id": 92,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Copy-Item ../../album_style.css styles/style.css",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:38"
+  },
+  {
+    "id": 93,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Copy-Item ../../assets/PIA18033.jpg images/earth.jpg",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:38"
+  },
+  {
+    "id": 94,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Copy-Item ../../assets/PIA00405.jpg images/moon.jpg",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:39"
+  },
+  {
+    "id": 95,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Copy-Item ../../assets/PIA00343.jpg images/jupiter.jpg",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:39"
+  },
+  {
+    "id": 96,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Set-Content -Encoding utf8NoBOM .gitignore '*.txt'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:40"
+  },
+  {
+    "id": 97,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Set-Content -Encoding utf8NoBOM notes.txt 'This local note must not be committed.'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:41"
+  },
+  {
+    "id": 98,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git check-ignore -v notes.txt",
+    "output": ".gitignore:1:*.txt\tnotes.txt",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:41"
+  },
+  {
+    "id": 99,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git status --short",
+    "output": "M index.html\n M styles/style.css\n?? .gitignore\n?? images/earth.jpg\n?? images/jupiter.jpg\n?? images/moon.jpg",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:42"
+  },
+  {
+    "id": 100,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git add images",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:42"
+  },
+  {
+    "id": 101,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git add index.html styles/style.css .gitignore",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:43"
+  },
+  {
+    "id": 102,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git commit -m \"My album\"",
+    "output": "[master b7cbd48] My album\n 6 files changed, 43 insertions(+), 65 deletions(-)\n create mode 100644 .gitignore\n create mode 100644 images/earth.jpg\n create mode 100644 images/jupiter.jpg\n create mode 100644 images/moon.jpg",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:43"
+  },
+  {
+    "id": 103,
+    "section": "ЛР3. Створення фотоальбому та gitignore",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git ls-files",
+    "output": ".github/CODEOWNERS\n.gitignore\nCODE_OF_CONDUCT.md\nLICENSE\nREADME.md\nSECURITY.md\nimages/earth.jpg\nimages/firefox-icon.png\nimages/jupiter.jpg\nimages/moon.jpg\nindex.html\nstyles/style.css",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:44"
+  },
+  {
+    "id": 104,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Set-Content -Encoding utf8NoBOM bad_feature.js 'throw new Error(\"Bad feature for revert demonstration\");'",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:44"
+  },
+  {
+    "id": 105,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git add bad_feature.js",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:45"
+  },
+  {
+    "id": 106,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git commit -m \"Bad feature\"",
+    "output": "[master 433c9dc] Bad feature\n 1 file changed, 1 insertion(+)\n create mode 100644 bad_feature.js",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:45"
+  },
+  {
+    "id": 107,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git rev-parse HEAD",
+    "output": "433c9dc2eefdc584d1450364e7d8e9d4341fa44a",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:46"
+  },
+  {
+    "id": 108,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git log --oneline -4",
+    "output": "433c9dc Bad feature\nb7cbd48 My album\n6c7a360 ci(CODEOWNERS): add content team for CODEOWNERS (#133)\n16a0f38 Update CODEOWNERS (#123)",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:47"
+  },
+  {
+    "id": 109,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git revert --no-edit 433c9dc2eefdc584d1450364e7d8e9d4341fa44a",
+    "output": "[master cdaba9e] Revert \"Bad feature\"\n Date: Fri Nov 13 22:00:48 2026 +0200\n 1 file changed, 1 deletion(-)\n delete mode 100644 bad_feature.js",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:47"
+  },
+  {
+    "id": 110,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "Test-Path bad_feature.js",
+    "output": "False",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:48"
+  },
+  {
+    "id": 111,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git log --oneline -4",
+    "output": "cdaba9e Revert \"Bad feature\"\n433c9dc Bad feature\nb7cbd48 My album\n6c7a360 ci(CODEOWNERS): add content team for CODEOWNERS (#133)",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:48"
+  },
+  {
+    "id": 112,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git diff HEAD~2 HEAD --stat",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:49"
+  },
+  {
+    "id": 113,
+    "section": "ЛР3. Безпечне скасування невдалого коміту",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git status --short --ignored",
+    "output": "!! notes.txt",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:50"
+  },
+  {
+    "id": 114,
+    "section": "ЛР3. Підключення власного віддаленого репозиторію",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git remote rm origin",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:50"
+  },
+  {
+    "id": 115,
+    "section": "ЛР3. Підключення власного віддаленого репозиторію",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git remote add origin https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:51"
+  },
+  {
+    "id": 116,
+    "section": "ЛР3. Підключення власного віддаленого репозиторію",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git remote -v",
+    "output": "origin\thttps://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git (fetch)\norigin\thttps://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git (push)",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:51"
+  },
+  {
+    "id": 117,
+    "section": "ЛР3. Підключення власного віддаленого репозиторію",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git tag lab3-complete",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:52"
+  },
+  {
+    "id": 118,
+    "section": "ЛР3. Підключення власного віддаленого репозиторію",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git status",
+    "output": "On branch master\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-13 22:00:52"
+  },
+  {
+    "id": 119,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "gh auth setup-git",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:02"
+  },
+  {
+    "id": 120,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git add README.md",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:03"
+  },
+  {
+    "id": 121,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git commit -m \"Document Git laboratory assignments\"",
+    "output": "[master ced8a32] Document Git laboratory assignments\n 1 file changed, 41 insertions(+)\n create mode 100644 README.md",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:04"
+  },
+  {
+    "id": 122,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "gh repo view aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets --json nameWithOwner,visibility,url",
+    "output": "{\"nameWithOwner\":\"aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets\",\"url\":\"https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets\",\"visibility\":\"PUBLIC\"}",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:04"
+  },
+  {
+    "id": 123,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git push -u origin master",
+    "output": "To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git\n * [new branch]      master -> master\nbranch 'master' set up to track 'origin/master'.",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:05"
+  },
+  {
+    "id": 124,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git push origin addition subtraction multiplication division",
+    "output": "To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git\n * [new branch]      addition -> addition\n * [new branch]      subtraction -> subtraction\n * [new branch]      multiplication -> multiplication\n * [new branch]      division -> division",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:08"
+  },
+  {
+    "id": 125,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git push origin --tags",
+    "output": "To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git\n * [new tag]         lab1-complete -> lab1-complete\n * [new tag]         lab2-complete -> lab2-complete",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:11"
+  },
+  {
+    "id": 126,
+    "section": "ЛР2. Надсилання історії на GitHub",
+    "cwd": "execution/FCIT",
+    "command": "git ls-remote --heads origin",
+    "output": "a58e06703716ae045a78e75c51811e1f30178bdb\trefs/heads/addition\ne9f633dbc6eaae7a86f004b50c4988601a0977c7\trefs/heads/division\nced8a3268eb1e119da3a453bdf86403c204cb607\trefs/heads/master\n47ddf124edc1f03f3ad2dc9c083012b60e593894\trefs/heads/multiplication\n4ed64332e620e5874e863f185b1fc44ec52c5c37\trefs/heads/subtraction",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:13"
+  },
+  {
+    "id": 127,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "gh repo create aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io --public --description \"Лабораторна 3: фотоальбом і робота з Git. Ярослав Мороченець.\"",
+    "output": "https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:14"
+  },
+  {
+    "id": 128,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git add README.md",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:20"
+  },
+  {
+    "id": 129,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git commit -m \"Document photo sources and lab results\"",
+    "output": "[master b2c65dc] Document photo sources and lab results\n 1 file changed, 19 insertions(+), 4 deletions(-)",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:21"
+  },
+  {
+    "id": 130,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git push -u origin master",
+    "output": "To https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git\n * [new branch]      master -> master\nbranch 'master' set up to track 'origin/master'.",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:21"
+  },
+  {
+    "id": 131,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git push origin --tags",
+    "output": "To https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git\n * [new tag]         lab3-complete -> lab3-complete",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:25"
+  },
+  {
+    "id": 132,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git fetch origin",
+    "output": "",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:27"
+  },
+  {
+    "id": 133,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git pull --ff-only origin master",
+    "output": "From https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io\n * branch            master     -> FETCH_HEAD\nAlready up to date.",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:28"
+  },
+  {
+    "id": 134,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git status",
+    "output": "On branch master\nYour branch is up to date with 'origin/master'.\n\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:30"
+  },
+  {
+    "id": 135,
+    "section": "ЛР3. Надсилання фотоальбому на GitHub",
+    "cwd": "execution/Lab3_Yaroslav_Morochenets.io",
+    "command": "git ls-remote --heads origin",
+    "output": "b2c65dc0c5b34bb841d7f6b6d20e3312e25ed0cf\trefs/heads/master",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:30"
+  },
+  {
+    "id": 136,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution",
+    "command": "git clone --branch master https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git verify-lab2",
+    "output": "Cloning into 'verify-lab2'...",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:31"
+  },
+  {
+    "id": 137,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution",
+    "command": "git clone --branch master https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git verify-lab3",
+    "output": "Cloning into 'verify-lab3'...",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:33"
+  },
+  {
+    "id": 138,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution/verify-lab3",
+    "command": "git log --oneline -4",
+    "output": "b2c65dc Document photo sources and lab results\ncdaba9e Revert \"Bad feature\"\n433c9dc Bad feature\nb7cbd48 My album",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:35"
+  },
+  {
+    "id": 139,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution/verify-lab3",
+    "command": "Test-Path bad_feature.js",
+    "output": "False",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:35"
+  },
+  {
+    "id": 140,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution/verify-lab2",
+    "command": "git status",
+    "output": "On branch master\nYour branch is up to date with 'origin/master'.\n\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:36"
+  },
+  {
+    "id": 141,
+    "section": "ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв",
+    "cwd": "execution/verify-lab3",
+    "command": "git status",
+    "output": "On branch master\nYour branch is up to date with 'origin/master'.\n\nnothing to commit, working tree clean",
+    "exit_code": 0,
+    "started": "2026-11-13 22:08:36"
+  }
+]

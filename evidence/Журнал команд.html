@@ -1,0 +1,308 @@
+<!doctype html><meta charset="utf-8"><title>Повний журнал команд Git</title><style>body{max-width:1100px;margin:30px auto;font:16px Arial}pre{white-space:pre-wrap;font:15px Consolas,monospace;border:1px solid #ccc;padding:12px}h2{font-size:17px;margin-top:28px}</style><h1>Журнал фактично виконаних команд</h1><p>Ярослав Мороченець. Вивід stdout/stderr; помилки перевірок також збережені.</p><h2>001. ЛР1. Налаштування та перші коміти</h2><pre>git --version
+git version 2.56.0.windows.4</pre><p>Код завершення: 0</p><h2>002. ЛР1. Налаштування та перші коміти</h2><pre>git config --global user.name &quot;Ярослав Мороченець&quot;
+</pre><p>Код завершення: 0</p><h2>003. ЛР1. Налаштування та перші коміти</h2><pre>git config --global user.email &quot;346407698+aroslavmorocenec03-lab@users.noreply.github.com&quot;
+</pre><p>Код завершення: 0</p><h2>004. ЛР1. Налаштування та перші коміти</h2><pre>git config --global init.defaultBranch master
+</pre><p>Код завершення: 0</p><h2>005. ЛР1. Налаштування та перші коміти</h2><pre>git config --global core.autocrlf false
+</pre><p>Код завершення: 0</p><h2>006. ЛР1. Налаштування та перші коміти</h2><pre>git config --global core.quotePath false
+</pre><p>Код завершення: 0</p><h2>007. ЛР1. Налаштування та перші коміти</h2><pre>git config --global --get user.name
+Ярослав Мороченець</pre><p>Код завершення: 0</p><h2>008. ЛР1. Налаштування та перші коміти</h2><pre>New-Item -ItemType Directory FCIT | Select-Object Name
+Name
+----
+FCIT</pre><p>Код завершення: 0</p><h2>009. ЛР1. Налаштування та перші коміти</h2><pre>New-Item -ItemType File student.html | Select-Object Name
+Name
+----
+student.html</pre><p>Код завершення: 0</p><h2>010. ЛР1. Налаштування та перші коміти</h2><pre>Set-Content -Encoding utf8NoBOM student.html &#x27;&lt;!doctype html&gt;&lt;html lang=&quot;uk&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Студент&lt;/title&gt;&lt;p&gt;Ярослав Мороченець&lt;/p&gt;&lt;/html&gt;&#x27;
+</pre><p>Код завершення: 0</p><h2>011. ЛР1. Налаштування та перші коміти</h2><pre>git init
+Initialized empty Git repository in C:/Users/ksvit/Documents/Codex/2026-11-12/d-x20/work/Git-Labs/execution/FCIT/.git/</pre><p>Код завершення: 0</p><h2>012. ЛР1. Налаштування та перші коміти</h2><pre>git add student.html
+</pre><p>Код завершення: 0</p><h2>013. ЛР1. Налаштування та перші коміти</h2><pre>git commit -m &quot;First Commit&quot;
+[master (root-commit) ad25a89] First Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 student.html</pre><p>Код завершення: 0</p><h2>014. ЛР1. Налаштування та перші коміти</h2><pre>git status
+On branch master
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>015. ЛР1. Налаштування та перші коміти</h2><pre>(Get-Content -Raw student.html).Replace(&#x27;Ярослав Мороченець&#x27;,&#x27;Ярослав &lt;b&gt;Мороченець&lt;/b&gt;&#x27;) | Set-Content -Encoding utf8NoBOM student.html
+</pre><p>Код завершення: 0</p><h2>016. ЛР1. Налаштування та перші коміти</h2><pre>git status
+On branch master
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+	modified:   student.html
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</pre><p>Код завершення: 0</p><h2>017. ЛР1. Налаштування та перші коміти</h2><pre>git diff -- student.html
+diff --git a/student.html b/student.html
+index 7b66270..6c62b5d 100644
+--- a/student.html
++++ b/student.html
+@@ -1 +1,2 @@
+-&lt;!doctype html&gt;&lt;html lang=&quot;uk&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Студент&lt;/title&gt;&lt;p&gt;Ярослав Мороченець&lt;/p&gt;&lt;/html&gt;
++&lt;!doctype html&gt;&lt;html lang=&quot;uk&quot;&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Студент&lt;/title&gt;&lt;p&gt;Ярослав &lt;b&gt;Мороченець&lt;/b&gt;&lt;/p&gt;&lt;/html&gt;
++</pre><p>Код завершення: 0</p><h2>018. ЛР1. Налаштування та перші коміти</h2><pre>Set-Content -Encoding utf8NoBOM junior.html &#x27;&lt;!doctype html&gt;&lt;html&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Junior&lt;/title&gt;&lt;p&gt;Junior developer&lt;/p&gt;&lt;/html&gt;&#x27;
+</pre><p>Код завершення: 0</p><h2>019. ЛР1. Налаштування та перші коміти</h2><pre>Set-Content -Encoding utf8NoBOM senior.html &#x27;&lt;!doctype html&gt;&lt;html&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Senior&lt;/title&gt;&lt;p&gt;Senior developer&lt;/p&gt;&lt;/html&gt;&#x27;
+</pre><p>Код завершення: 0</p><h2>020. ЛР1. Налаштування та перші коміти</h2><pre>git add junior.html
+</pre><p>Код завершення: 0</p><h2>021. ЛР1. Налаштування та перші коміти</h2><pre>git add senior.html
+</pre><p>Код завершення: 0</p><h2>022. ЛР1. Налаштування та перші коміти</h2><pre>git commit -m &quot;People who work&quot;
+[master 8435ba8] People who work
+ 2 files changed, 2 insertions(+)
+ create mode 100644 junior.html
+ create mode 100644 senior.html</pre><p>Код завершення: 0</p><h2>023. ЛР1. Налаштування та перші коміти</h2><pre>git add student.html
+</pre><p>Код завершення: 0</p><h2>024. ЛР1. Налаштування та перші коміти</h2><pre>git commit -m &quot;People who study&quot;
+[master 72e9ca6] People who study
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>025. ЛР1. Налаштування та перші коміти</h2><pre>git add .
+</pre><p>Код завершення: 0</p><h2>026. ЛР1. Гілки операцій калькулятора</h2><pre>Copy-Item ../../assets/calc-base.cpp calc.cpp
+</pre><p>Код завершення: 0</p><h2>027. ЛР1. Гілки операцій калькулятора</h2><pre>Set-Content -Encoding utf8NoBOM .gitignore @(&#x27;*.exe&#x27;,&#x27;*.obj&#x27;,&#x27;*.pdb&#x27;,&#x27;.zig-cache/&#x27;,&#x27;zig-out/&#x27;)
+</pre><p>Код завершення: 0</p><h2>028. ЛР1. Гілки операцій калькулятора</h2><pre>git add calc.cpp .gitignore
+</pre><p>Код завершення: 0</p><h2>029. ЛР1. Гілки операцій калькулятора</h2><pre>git commit -m &quot;Add calculator skeleton&quot;
+[master 2727c46] Add calculator skeleton
+ 2 files changed, 51 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 calc.cpp</pre><p>Код завершення: 0</p><h2>030. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout -b addition
+Switched to a new branch &#x27;addition&#x27;</pre><p>Код завершення: 0</p><h2>031. ЛР1. Гілки операцій калькулятора</h2><pre>git status --short --branch
+## addition</pre><p>Код завершення: 0</p><h2>032. ЛР1. Гілки операцій калькулятора</h2><pre>(Get-Content -Raw calc.cpp).Replace(&#x27;// ADDITION&#x27;,&#x27;result = a + b;&#x27;) | Set-Content -Encoding utf8NoBOM calc.cpp
+</pre><p>Код завершення: 0</p><h2>033. ЛР1. Гілки операцій калькулятора</h2><pre>git add calc.cpp
+</pre><p>Код завершення: 0</p><h2>034. ЛР1. Гілки операцій калькулятора</h2><pre>git commit -m &quot;addition&quot;
+[addition a58e067] addition
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>035. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout master
+Switched to branch &#x27;master&#x27;</pre><p>Код завершення: 0</p><h2>036. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout -b subtraction
+Switched to a new branch &#x27;subtraction&#x27;</pre><p>Код завершення: 0</p><h2>037. ЛР1. Гілки операцій калькулятора</h2><pre>git status --short --branch
+## subtraction</pre><p>Код завершення: 0</p><h2>038. ЛР1. Гілки операцій калькулятора</h2><pre>(Get-Content -Raw calc.cpp).Replace(&#x27;// SUBTRACTION&#x27;,&#x27;result = a - b;&#x27;) | Set-Content -Encoding utf8NoBOM calc.cpp
+</pre><p>Код завершення: 0</p><h2>039. ЛР1. Гілки операцій калькулятора</h2><pre>git add calc.cpp
+</pre><p>Код завершення: 0</p><h2>040. ЛР1. Гілки операцій калькулятора</h2><pre>git commit -m &quot;subtraction&quot;
+[subtraction 4ed6433] subtraction
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>041. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout master
+Switched to branch &#x27;master&#x27;</pre><p>Код завершення: 0</p><h2>042. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout -b multiplication
+Switched to a new branch &#x27;multiplication&#x27;</pre><p>Код завершення: 0</p><h2>043. ЛР1. Гілки операцій калькулятора</h2><pre>git status --short --branch
+## multiplication</pre><p>Код завершення: 0</p><h2>044. ЛР1. Гілки операцій калькулятора</h2><pre>(Get-Content -Raw calc.cpp).Replace(&#x27;// MULTIPLICATION&#x27;,&#x27;result = a * b;&#x27;) | Set-Content -Encoding utf8NoBOM calc.cpp
+</pre><p>Код завершення: 0</p><h2>045. ЛР1. Гілки операцій калькулятора</h2><pre>git add calc.cpp
+</pre><p>Код завершення: 0</p><h2>046. ЛР1. Гілки операцій калькулятора</h2><pre>git commit -m &quot;multiplication&quot;
+[multiplication 47ddf12] multiplication
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>047. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout master
+Switched to branch &#x27;master&#x27;</pre><p>Код завершення: 0</p><h2>048. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout -b division
+Switched to a new branch &#x27;division&#x27;</pre><p>Код завершення: 0</p><h2>049. ЛР1. Гілки операцій калькулятора</h2><pre>git status --short --branch
+## division</pre><p>Код завершення: 0</p><h2>050. ЛР1. Гілки операцій калькулятора</h2><pre>(Get-Content -Raw calc.cpp).Replace(&#x27;// DIVISION&#x27;,&#x27;if (b == 0) { std::cerr &lt;&lt; &quot;Division by zero\n&quot;; return 2; } result = a / b;&#x27;) | Set-Content -Encoding utf8NoBOM calc.cpp
+</pre><p>Код завершення: 0</p><h2>051. ЛР1. Гілки операцій калькулятора</h2><pre>git add calc.cpp
+</pre><p>Код завершення: 0</p><h2>052. ЛР1. Гілки операцій калькулятора</h2><pre>git commit -m &quot;division&quot;
+[division e9f633d] division
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>053. ЛР1. Гілки операцій калькулятора</h2><pre>git checkout master
+Switched to branch &#x27;master&#x27;</pre><p>Код завершення: 0</p><h2>054. ЛР1. Гілки операцій калькулятора</h2><pre>git merge --no-ff addition -m &quot;Merge addition into master&quot;
+Merge made by the &#x27;ort&#x27; strategy.
+ calc.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>055. ЛР1. Гілки операцій калькулятора</h2><pre>git merge --no-ff subtraction -m &quot;Merge subtraction into master&quot;
+Auto-merging calc.cpp
+Merge made by the &#x27;ort&#x27; strategy.
+ calc.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>056. ЛР1. Гілки операцій калькулятора</h2><pre>git merge --no-ff multiplication -m &quot;Merge multiplication into master&quot;
+Auto-merging calc.cpp
+Merge made by the &#x27;ort&#x27; strategy.
+ calc.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>057. ЛР1. Гілки операцій калькулятора</h2><pre>git merge --no-ff division -m &quot;Merge division into master&quot;
+Auto-merging calc.cpp
+Merge made by the &#x27;ort&#x27; strategy.
+ calc.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)</pre><p>Код завершення: 0</p><h2>058. ЛР1. Гілки операцій калькулятора</h2><pre>git status
+On branch master
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>059. ЛР1. Гілки операцій калькулятора</h2><pre>git log --oneline --graph --all --decorate
+*   dbd1a5c (HEAD -&gt; master) Merge division into master
+|\  
+| * e9f633d (division) division
+* |   9008781 Merge multiplication into master
+|\ \  
+| * | 47ddf12 (multiplication) multiplication
+| |/  
+* |   633697d Merge subtraction into master
+|\ \  
+| * | 4ed6433 (subtraction) subtraction
+| |/  
+* |   f873a2b Merge addition into master
+|\ \  
+| |/  
+|/|   
+| * a58e067 (addition) addition
+|/  
+* 2727c46 Add calculator skeleton
+* 72e9ca6 People who study
+* 8435ba8 People who work
+* ad25a89 First Commit</pre><p>Код завершення: 0</p><h2>060. ЛР1. Перевірка калькулятора</h2><pre>zig version
+0.15.2</pre><p>Код завершення: 0</p><h2>061. ЛР1. Перевірка калькулятора</h2><pre>zig c++ -std=c++17 -Wall -Wextra calc.cpp -o calc.exe
+</pre><p>Код завершення: 0</p><h2>062. ЛР1. Перевірка калькулятора</h2><pre>@(&#x27;6&#x27;,&#x27;1&#x27;,&#x27;4&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 10</pre><p>Код завершення: 0</p><h2>063. ЛР1. Перевірка калькулятора</h2><pre>@(&#x27;6&#x27;,&#x27;2&#x27;,&#x27;4&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 2</pre><p>Код завершення: 0</p><h2>064. ЛР1. Перевірка калькулятора</h2><pre>@(&#x27;6&#x27;,&#x27;3&#x27;,&#x27;4&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 24</pre><p>Код завершення: 0</p><h2>065. ЛР1. Перевірка калькулятора</h2><pre>@(&#x27;5&#x27;,&#x27;4&#x27;,&#x27;2&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/): Second number: Result = 2.5</pre><p>Код завершення: 0</p><h2>066. ЛР1. Перевірка калькулятора</h2><pre>@(&#x27;5&#x27;,&#x27;4&#x27;,&#x27;0&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/): Second number: Division by zero</pre><p>Код завершення: 1</p><h2>067. ЛР1. Перевірка калькулятора</h2><pre>git tag lab1-complete
+</pre><p>Код завершення: 0</p><h2>068. ЛР2. Нова операція у new_feature</h2><pre>git init
+Reinitialized existing Git repository in C:/Users/ksvit/Documents/Codex/2026-11-12/d-x20/work/Git-Labs/execution/FCIT/.git/</pre><p>Код завершення: 0</p><h2>069. ЛР2. Нова операція у new_feature</h2><pre>git remote add origin https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git
+</pre><p>Код завершення: 0</p><h2>070. ЛР2. Нова операція у new_feature</h2><pre>git remote -v
+origin	https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git (fetch)
+origin	https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git (push)</pre><p>Код завершення: 0</p><h2>071. ЛР2. Нова операція у new_feature</h2><pre>git branch new_feature
+</pre><p>Код завершення: 0</p><h2>072. ЛР2. Нова операція у new_feature</h2><pre>git branch
+addition
+  division
+* master
+  multiplication
+  new_feature
+  subtraction</pre><p>Код завершення: 0</p><h2>073. ЛР2. Нова операція у new_feature</h2><pre>git checkout new_feature
+Switched to branch &#x27;new_feature&#x27;</pre><p>Код завершення: 0</p><h2>074. ЛР2. Нова операція у new_feature</h2><pre>(Get-Content -Raw calc.cpp).Replace(&#x27;// POWER_CASE&#x27;,&#x27;case 5: { result = std::pow(a, b); break; }&#x27;).Replace(&#x27;4:/&#x27;,&#x27;4:/ 5:pow&#x27;) | Set-Content -Encoding utf8NoBOM calc.cpp
+</pre><p>Код завершення: 0</p><h2>075. ЛР2. Нова операція у new_feature</h2><pre>git diff --stat
+calc.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)</pre><p>Код завершення: 0</p><h2>076. ЛР2. Нова операція у new_feature</h2><pre>git add calc.cpp
+</pre><p>Код завершення: 0</p><h2>077. ЛР2. Нова операція у new_feature</h2><pre>git commit -m &quot;New feature added&quot;
+[new_feature 0bfbb09] New feature added
+ 1 file changed, 3 insertions(+), 2 deletions(-)</pre><p>Код завершення: 0</p><h2>078. ЛР2. Нова операція у new_feature</h2><pre>zig c++ -std=c++17 -Wall -Wextra calc.cpp -o calc.exe
+</pre><p>Код завершення: 0</p><h2>079. ЛР2. Нова операція у new_feature</h2><pre>@(&#x27;2&#x27;,&#x27;5&#x27;,&#x27;3&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/ 5:pow): Second number: Result = 8</pre><p>Код завершення: 0</p><h2>080. ЛР2. Нова операція у new_feature</h2><pre>@(&#x27;2&#x27;,&#x27;5&#x27;,&#x27;-2&#x27;) | ./calc.exe
+First number: Operation (1:+ 2:- 3:* 4:/ 5:pow): Second number: Result = 0.25</pre><p>Код завершення: 0</p><h2>081. ЛР2. Нова операція у new_feature</h2><pre>git checkout master
+Switched to branch &#x27;master&#x27;</pre><p>Код завершення: 0</p><h2>082. ЛР2. Нова операція у new_feature</h2><pre>git merge --no-ff new_feature -m &quot;Merge exponentiation feature&quot;
+Merge made by the &#x27;ort&#x27; strategy.
+ calc.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)</pre><p>Код завершення: 0</p><h2>083. ЛР2. Нова операція у new_feature</h2><pre>git branch -d new_feature
+Deleted branch new_feature (was 0bfbb09).</pre><p>Код завершення: 0</p><h2>084. ЛР2. Нова операція у new_feature</h2><pre>git tag lab2-complete
+</pre><p>Код завершення: 0</p><h2>085. ЛР2. Нова операція у new_feature</h2><pre>git status
+On branch master
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>086. ЛР2. Нова операція у new_feature</h2><pre>git log --oneline --graph --all --decorate -16
+*   de2cf6c (HEAD -&gt; master, tag: lab2-complete) Merge exponentiation feature
+|\  
+| * 0bfbb09 New feature added
+|/  
+*   dbd1a5c (tag: lab1-complete) Merge division into master
+|\  
+| * e9f633d (division) division
+* |   9008781 Merge multiplication into master
+|\ \  
+| * | 47ddf12 (multiplication) multiplication
+| |/  
+* |   633697d Merge subtraction into master
+|\ \  
+| * | 4ed6433 (subtraction) subtraction
+| |/  
+* |   f873a2b Merge addition into master
+|\ \  
+| |/  
+|/|   
+| * a58e067 (addition) addition
+|/  
+* 2727c46 Add calculator skeleton
+* 72e9ca6 People who study
+* 8435ba8 People who work
+* ad25a89 First Commit</pre><p>Код завершення: 0</p><h2>087. ЛР3. Клонування шаблону</h2><pre>git clone https://github.com/FCIT-SoftwareEngineeringBasics/Lab3.io original-template
+Cloning into &#x27;original-template&#x27;...
+fatal: could not read Username for &#x27;https://github.com&#x27;: terminal prompts disabled</pre><p>Код завершення: 1</p><h2>088. ЛР3. Клонування шаблону</h2><pre>git clone https://github.com/mdn/beginner-html-site-styled.git Lab3_Yaroslav_Morochenets.io
+Cloning into &#x27;Lab3_Yaroslav_Morochenets.io&#x27;...</pre><p>Код завершення: 0</p><h2>089. ЛР3. Клонування шаблону</h2><pre>git branch -m master
+</pre><p>Код завершення: 0</p><h2>090. ЛР3. Клонування шаблону</h2><pre>git remote -v
+origin	https://github.com/mdn/beginner-html-site-styled.git (fetch)
+origin	https://github.com/mdn/beginner-html-site-styled.git (push)</pre><p>Код завершення: 0</p><h2>091. ЛР3. Створення фотоальбому та gitignore</h2><pre>Copy-Item ../../album_index.html index.html
+</pre><p>Код завершення: 0</p><h2>092. ЛР3. Створення фотоальбому та gitignore</h2><pre>Copy-Item ../../album_style.css styles/style.css
+</pre><p>Код завершення: 0</p><h2>093. ЛР3. Створення фотоальбому та gitignore</h2><pre>Copy-Item ../../assets/PIA18033.jpg images/earth.jpg
+</pre><p>Код завершення: 0</p><h2>094. ЛР3. Створення фотоальбому та gitignore</h2><pre>Copy-Item ../../assets/PIA00405.jpg images/moon.jpg
+</pre><p>Код завершення: 0</p><h2>095. ЛР3. Створення фотоальбому та gitignore</h2><pre>Copy-Item ../../assets/PIA00343.jpg images/jupiter.jpg
+</pre><p>Код завершення: 0</p><h2>096. ЛР3. Створення фотоальбому та gitignore</h2><pre>Set-Content -Encoding utf8NoBOM .gitignore &#x27;*.txt&#x27;
+</pre><p>Код завершення: 0</p><h2>097. ЛР3. Створення фотоальбому та gitignore</h2><pre>Set-Content -Encoding utf8NoBOM notes.txt &#x27;This local note must not be committed.&#x27;
+</pre><p>Код завершення: 0</p><h2>098. ЛР3. Створення фотоальбому та gitignore</h2><pre>git check-ignore -v notes.txt
+.gitignore:1:*.txt	notes.txt</pre><p>Код завершення: 0</p><h2>099. ЛР3. Створення фотоальбому та gitignore</h2><pre>git status --short
+M index.html
+ M styles/style.css
+?? .gitignore
+?? images/earth.jpg
+?? images/jupiter.jpg
+?? images/moon.jpg</pre><p>Код завершення: 0</p><h2>100. ЛР3. Створення фотоальбому та gitignore</h2><pre>git add images
+</pre><p>Код завершення: 0</p><h2>101. ЛР3. Створення фотоальбому та gitignore</h2><pre>git add index.html styles/style.css .gitignore
+</pre><p>Код завершення: 0</p><h2>102. ЛР3. Створення фотоальбому та gitignore</h2><pre>git commit -m &quot;My album&quot;
+[master b7cbd48] My album
+ 6 files changed, 43 insertions(+), 65 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 images/earth.jpg
+ create mode 100644 images/jupiter.jpg
+ create mode 100644 images/moon.jpg</pre><p>Код завершення: 0</p><h2>103. ЛР3. Створення фотоальбому та gitignore</h2><pre>git ls-files
+.github/CODEOWNERS
+.gitignore
+CODE_OF_CONDUCT.md
+LICENSE
+README.md
+SECURITY.md
+images/earth.jpg
+images/firefox-icon.png
+images/jupiter.jpg
+images/moon.jpg
+index.html
+styles/style.css</pre><p>Код завершення: 0</p><h2>104. ЛР3. Безпечне скасування невдалого коміту</h2><pre>Set-Content -Encoding utf8NoBOM bad_feature.js &#x27;throw new Error(&quot;Bad feature for revert demonstration&quot;);&#x27;
+</pre><p>Код завершення: 0</p><h2>105. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git add bad_feature.js
+</pre><p>Код завершення: 0</p><h2>106. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git commit -m &quot;Bad feature&quot;
+[master 433c9dc] Bad feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 bad_feature.js</pre><p>Код завершення: 0</p><h2>107. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git rev-parse HEAD
+433c9dc2eefdc584d1450364e7d8e9d4341fa44a</pre><p>Код завершення: 0</p><h2>108. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git log --oneline -4
+433c9dc Bad feature
+b7cbd48 My album
+6c7a360 ci(CODEOWNERS): add content team for CODEOWNERS (#133)
+16a0f38 Update CODEOWNERS (#123)</pre><p>Код завершення: 0</p><h2>109. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git revert --no-edit 433c9dc2eefdc584d1450364e7d8e9d4341fa44a
+[master cdaba9e] Revert &quot;Bad feature&quot;
+ Date: Fri Nov 13 22:00:48 2026 +0200
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 bad_feature.js</pre><p>Код завершення: 0</p><h2>110. ЛР3. Безпечне скасування невдалого коміту</h2><pre>Test-Path bad_feature.js
+False</pre><p>Код завершення: 0</p><h2>111. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git log --oneline -4
+cdaba9e Revert &quot;Bad feature&quot;
+433c9dc Bad feature
+b7cbd48 My album
+6c7a360 ci(CODEOWNERS): add content team for CODEOWNERS (#133)</pre><p>Код завершення: 0</p><h2>112. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git diff HEAD~2 HEAD --stat
+</pre><p>Код завершення: 0</p><h2>113. ЛР3. Безпечне скасування невдалого коміту</h2><pre>git status --short --ignored
+!! notes.txt</pre><p>Код завершення: 0</p><h2>114. ЛР3. Підключення власного віддаленого репозиторію</h2><pre>git remote rm origin
+</pre><p>Код завершення: 0</p><h2>115. ЛР3. Підключення власного віддаленого репозиторію</h2><pre>git remote add origin https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git
+</pre><p>Код завершення: 0</p><h2>116. ЛР3. Підключення власного віддаленого репозиторію</h2><pre>git remote -v
+origin	https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git (fetch)
+origin	https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git (push)</pre><p>Код завершення: 0</p><h2>117. ЛР3. Підключення власного віддаленого репозиторію</h2><pre>git tag lab3-complete
+</pre><p>Код завершення: 0</p><h2>118. ЛР3. Підключення власного віддаленого репозиторію</h2><pre>git status
+On branch master
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>119. ЛР2. Надсилання історії на GitHub</h2><pre>gh auth setup-git
+</pre><p>Код завершення: 0</p><h2>120. ЛР2. Надсилання історії на GitHub</h2><pre>git add README.md
+</pre><p>Код завершення: 0</p><h2>121. ЛР2. Надсилання історії на GitHub</h2><pre>git commit -m &quot;Document Git laboratory assignments&quot;
+[master ced8a32] Document Git laboratory assignments
+ 1 file changed, 41 insertions(+)
+ create mode 100644 README.md</pre><p>Код завершення: 0</p><h2>122. ЛР2. Надсилання історії на GitHub</h2><pre>gh repo view aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets --json nameWithOwner,visibility,url
+{&quot;nameWithOwner&quot;:&quot;aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets&quot;,&quot;url&quot;:&quot;https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets&quot;,&quot;visibility&quot;:&quot;PUBLIC&quot;}</pre><p>Код завершення: 0</p><h2>123. ЛР2. Надсилання історії на GitHub</h2><pre>git push -u origin master
+To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git
+ * [new branch]      master -&gt; master
+branch &#x27;master&#x27; set up to track &#x27;origin/master&#x27;.</pre><p>Код завершення: 0</p><h2>124. ЛР2. Надсилання історії на GitHub</h2><pre>git push origin addition subtraction multiplication division
+To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git
+ * [new branch]      addition -&gt; addition
+ * [new branch]      subtraction -&gt; subtraction
+ * [new branch]      multiplication -&gt; multiplication
+ * [new branch]      division -&gt; division</pre><p>Код завершення: 0</p><h2>125. ЛР2. Надсилання історії на GitHub</h2><pre>git push origin --tags
+To https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git
+ * [new tag]         lab1-complete -&gt; lab1-complete
+ * [new tag]         lab2-complete -&gt; lab2-complete</pre><p>Код завершення: 0</p><h2>126. ЛР2. Надсилання історії на GitHub</h2><pre>git ls-remote --heads origin
+a58e06703716ae045a78e75c51811e1f30178bdb	refs/heads/addition
+e9f633dbc6eaae7a86f004b50c4988601a0977c7	refs/heads/division
+ced8a3268eb1e119da3a453bdf86403c204cb607	refs/heads/master
+47ddf124edc1f03f3ad2dc9c083012b60e593894	refs/heads/multiplication
+4ed64332e620e5874e863f185b1fc44ec52c5c37	refs/heads/subtraction</pre><p>Код завершення: 0</p><h2>127. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>gh repo create aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io --public --description &quot;Лабораторна 3: фотоальбом і робота з Git. Ярослав Мороченець.&quot;
+https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io</pre><p>Код завершення: 0</p><h2>128. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git add README.md
+</pre><p>Код завершення: 0</p><h2>129. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git commit -m &quot;Document photo sources and lab results&quot;
+[master b2c65dc] Document photo sources and lab results
+ 1 file changed, 19 insertions(+), 4 deletions(-)</pre><p>Код завершення: 0</p><h2>130. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git push -u origin master
+To https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git
+ * [new branch]      master -&gt; master
+branch &#x27;master&#x27; set up to track &#x27;origin/master&#x27;.</pre><p>Код завершення: 0</p><h2>131. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git push origin --tags
+To https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git
+ * [new tag]         lab3-complete -&gt; lab3-complete</pre><p>Код завершення: 0</p><h2>132. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git fetch origin
+</pre><p>Код завершення: 0</p><h2>133. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git pull --ff-only origin master
+From https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io
+ * branch            master     -&gt; FETCH_HEAD
+Already up to date.</pre><p>Код завершення: 0</p><h2>134. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git status
+On branch master
+Your branch is up to date with &#x27;origin/master&#x27;.
+
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>135. ЛР3. Надсилання фотоальбому на GitHub</h2><pre>git ls-remote --heads origin
+b2c65dc0c5b34bb841d7f6b6d20e3312e25ed0cf	refs/heads/master</pre><p>Код завершення: 0</p><h2>136. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>git clone --branch master https://github.com/aroslavmorocenec03-lab/Lab2_Yaroslav_Morochenets.git verify-lab2
+Cloning into &#x27;verify-lab2&#x27;...</pre><p>Код завершення: 0</p><h2>137. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>git clone --branch master https://github.com/aroslavmorocenec03-lab/Lab3_Yaroslav_Morochenets.io.git verify-lab3
+Cloning into &#x27;verify-lab3&#x27;...</pre><p>Код завершення: 0</p><h2>138. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>git log --oneline -4
+b2c65dc Document photo sources and lab results
+cdaba9e Revert &quot;Bad feature&quot;
+433c9dc Bad feature
+b7cbd48 My album</pre><p>Код завершення: 0</p><h2>139. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>Test-Path bad_feature.js
+False</pre><p>Код завершення: 0</p><h2>140. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>git status
+On branch master
+Your branch is up to date with &#x27;origin/master&#x27;.
+
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p><h2>141. ЛР2 і ЛР3. Перевірка опублікованих репозиторіїв</h2><pre>git status
+On branch master
+Your branch is up to date with &#x27;origin/master&#x27;.
+
+nothing to commit, working tree clean</pre><p>Код завершення: 0</p>
